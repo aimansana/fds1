@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officers Panel</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/officers.css">
+</head>
+<body>
+    <header>
+        <h1>Officers Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Only Login Section is Visible at First -->
+        <section id="login">
+            <h2>Officer Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+                <p><a href="#">Forgot Password?</a></p>
+            </form>
+        </section>
+
+        <!-- Dashboards (Initially Hidden) -->
+        <section id="field-officer-dashboard" class="dashboard">
+            <h2>Field Officer Dashboard</h2>
+            <button onclick="showForm('register-farmer')">Register Farmer</button>
+            <button onclick="showForm('update-farmer')">Update Farmer Details</button>
+            <button onclick="showForm('view-farmers')">View Farmers</button>
+        </section>
+
+        <section id="junior-officer-dashboard" class="dashboard">
+            <h2>Junior Officer Dashboard</h2>
+            <button>View Field Officers</button>
+            <button>Manage Requests</button>
+        </section>
+
+        <section id="senior-officer-dashboard" class="dashboard">
+            <h2>Senior Officer Dashboard</h2>
+            <button>Stock Management</button>
+            <button>View Analytics</button>
+        </section>
+
+        <section id="quality-control-dashboard" class="dashboard">
+            <h2>Quality Control Dashboard</h2>
+            <button>Upload Surveys</button>
+            <button>View Previous Surveys</button>
+        </section>
+
+        <section id="subsidy-payment-dashboard" class="dashboard">
+            <h2>Subsidy Payment Dashboard</h2>
+            <button>View Pending Payments</button>
+            <button>View Completed Payments</button>
+        </section>
+    </main>
+
+    <script src="scripts/officers.js"></script>
+</body>
+</html>

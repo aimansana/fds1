@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Tab</title>
+    <link rel="stylesheet" href="farmer_tab.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="login-section" class="login-section">
+        <h2>Login for Agricultural Officers</h2>
+        <form id="login-form">
+            <input type="text" placeholder="Username" id="username" required><br>
+            <input type="password" placeholder="Password" id="password" required><br>
+            <a href="#">Forgot Password?</a><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="farmer-dashboard" class="farmer-tab-container" style="display: none;">
+        <h1>Welcome to the Farmer's Dashboard</h1>
+        
+        <div class="card-container">
+            <!-- Profile Card -->
+            <div class="card">
+                <i class="fas fa-user-circle icon"></i>
+                <h3>Farmer Profile</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+            </div>
+    
+            <!-- Land Details Card -->
+            <div class="card">
+                <i class="fas fa-tractor icon"></i>
+                <h3>Land Details</h3>
+                <p><strong>Land Size:</strong> 10 acres</p>
+                <p><strong>Location:</strong> Village A</p>
+                <p><strong>Usage:</strong> Wheat cultivation</p>
+            </div>
+    
+            <!-- Request Status Card -->
+            <div class="card">
+                <i class="fas fa-check-circle icon"></i>
+                <h3>Request Status</h3>
+                <p><strong>Status:</strong> Approved</p>
+                <p><strong>Expected Delivery:</strong> 5-7 days</p>
+            </div>
+        </div>
+    
+        <!-- General Info Section -->
+        <div class="general-info">
+            <h2>How Farmers Can Benefit from the Scheme</h2>
+            <p>
+                This scheme provides subsidized fertilizers to farmers to increase crop yield 
+                and promote sustainable farming practices. By joining the program, farmers 
+                can save costs, improve land productivity, and contribute to sustainable 
+                agriculture in the region.
+            </p>
+        </div>
+    </div>
+    
+
+    <script src="farmer_tab.js"></script>
+</body>
+</html>
