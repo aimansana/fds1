@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Officers Login</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome, Agricultural Officer</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <select id="department" required>
+          <option value="" disabled selected>Select Department</option>
+          <option value="Agriculture">Agriculture</option>
+          <option value="Soil">Soil</option>
+          <option value="Fertilizer">Fertilizer</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
