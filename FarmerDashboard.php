@@ -102,7 +102,7 @@ $stmt->close();
             </div>
         </div>
 
-        <a href="logout.php" class="logout-btn">Logout</a> <!-- Logout Button -->
+        <a href="FarmerLogin.php" class="logout-btn">Logout</a> <!-- Logout Button -->
     </div>
 
     <script src="farmer.js"></script>
