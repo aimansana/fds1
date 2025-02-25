@@ -1,23 +1,13 @@
-// farmer_tab.js
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
 
-// Add event listener to the login form
-document.getElementById("login-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent form submission
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-    // Get username and password
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // For now, just check if fields are filled (simple validation)
-    if (username === "officer" && password === "1234") {
-        alert("Login successful!");
-
-        // Hide login section
-        document.getElementById("login-section").style.display = "none";
-
-        // Show farmer dashboard
-        document.getElementById("farmer-dashboard").style.display = "block";
+    if (username === "farmer123" && password === "password") {
+        alert("Login Successful! Redirecting...");
+        window.location.href = "farmer_dashboard.html"; // Redirect after login
     } else {
-        alert("Invalid username or password. Please try again.");
+        alert("Invalid Credentials! Please try again.");
     }
 });
