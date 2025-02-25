@@ -1,120 +1,89 @@
-/* General Styles */
+/* Full-screen background */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background: url('images/background2.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #16a085, #2ecc71);
-    color: #333;
 }
 
-/* Login Section */
-.login-section {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-}
-
-.login-section input {
-    width: 90%;
-    margin: 10px 0;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.login-section button {
-    background: #16a085;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-section button:hover {
-    background: #12876f;
-}
-
-/* Farmer Dashboard */
-.farmer-tab-container {
-    text-align: center;
-    width: 80%;
-    max-width: 1000px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.farmer-tab-container h1 {
-    color: #16a085;
-    margin-bottom: 30px;
-}
-
-/* Card Styles */
-.card-container {
+/* Login Container */
+.login-container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
-.card {
-    background: #f9f9f9;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(30% - 20px);
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card .icon {
-    font-size: 40px;
-    color: #16a085;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    margin: 10px 0;
-    color: #333;
-}
-
-.card p {
-    margin: 5px 0;
-    color: #555;
-}
-/* General Info Styles */
-.general-info {
-    margin-top: 30px;
-    background: #e8f5e9;
-    border-left: 6px solid #16a085;
-    padding: 20px;
+/* Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
 }
 
-.general-info h2 {
-    font-size: 1.5rem;
-    color: #16a085;
+/* Logo */
+.logo {
+    width: 80px;
     margin-bottom: 10px;
 }
 
-.general-info p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
+/* Heading */
+h2 {
+    color: #2E8B57;
+    font-size: 24px;
 }
 
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #333;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Login Button */
+button {
+    width: 100%;
+    background: #2E8B57;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1E5E3D;
+}
+
+/* Forgot Password */
+p a {
+    text-decoration: none;
+    color: #2E8B57;
+    font-size: 14px;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
