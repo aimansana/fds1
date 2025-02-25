@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricultural Officers Login</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subsidized Fertilizer Distribution</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Welcome, Agricultural Officer</h2>
-    <form id="loginForm">
-      <div class="form-group">
-        <label for="department">Department:</label>
-        <select id="department" required>
-          <option value="" disabled selected>Select Department</option>
-          <option value="Agriculture">Agriculture</option>
-          <option value="Soil">Soil</option>
-          <option value="Fertilizer">Fertilizer</option>
-        </select>
-      </div>
-      
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Enter your username" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="Enter your password" required>
-      </div>
 
-      <button type="submit" id="loginBtn">Login</button>
-    </form>
-  </div>
+    <header>
+        <img src="images/indialogoimages6.jpeg" alt="Bharat Logo" class="logo">
+        <h1>Subsidized Fertilizer Distribution System</h1>
+    </header>
 
-  <script src="script.js"></script> <!-- Link to your JS file -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Farmers</a></li>
+            <li><a href="#">Officers</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="images/images2.jpeg" alt="Farmers at Work"></div>
+            <div class="slide"><img src="images/images5.jpeg" alt="Fertilizer Distribution"></div>
+            <div class="slide"><img src="images/images1.jpeg" alt="Agriculture Growth"></div>
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>Welcome to the Subsidized Fertilizer Distribution System</h2>
+        <p>This platform helps farmers get government-subsidized fertilizers easily and track their requests.</p>
+        <a href="#" class="btn">Learn More</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Subsidized Fertilizer Distribution | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
