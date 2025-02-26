@@ -185,3 +185,54 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- Create `depid` table (Department Details)
+CREATE TABLE depid (
+    depID INT PRIMARY KEY AUTO_INCREMENT,
+    depName VARCHAR(100) NOT NULL
+);
+
+-- Create `offlogin` table (Officer Login Details)
+CREATE TABLE offlogin (
+    username VARCHAR(50) PRIMARY KEY,
+    passw VARCHAR(255) NOT NULL, -- Store hashed passwords
+    offID INT UNIQUE NOT NULL
+);
+
+-- Create `offdetails` table (Officer Personal Details)
+CREATE TABLE offdetails (
+    offID INT PRIMARY KEY AUTO_INCREMENT,
+    depID INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    age INT CHECK (age > 18),
+    phno VARCHAR(15) UNIQUE NOT NULL,
+    sex ENUM('Male', 'Female', 'Other') NOT NULL,
+    FOREIGN KEY (depID) REFERENCES depid(depID) ON DELETE CASCADE
+);
+
+
+
+-- Insert sample departments
+INSERT INTO depid (depName) VALUES 
+('Agriculture'), 
+('Irrigation'), 
+('Livestock'), 
+('Soil & Water Conservation'), 
+('Research & Development');
+
+-- Insert sample officers into `offdetails`
+INSERT INTO offdetails (depID, name, age, phno, sex) VALUES 
+(1, 'John Doe', 45, '9876543210', 'Male'),
+(2, 'Jane Smith', 38, '8765432109', 'Female'),
+(3, 'Michael Brown', 50, '7654321098', 'Male'),
+(4, 'Lisa White', 42, '6543210987', 'Female'),
+(5, 'Chris Green', 35, '5432109876', 'Other');
+
+-- Insert sample login credentials (with hashed passwords)
+INSERT INTO offlogin (username, passw, offID) VALUES 
+('johndoe', '$2y$10$Fw3TrXSDpf5Vxfj8AMhPA.Zmv2hHHpL3RAV2NzfrxtzLjCcZ.NIW.', 1),
+('janesmith', '$2y$10$Fw3TrXSDpf5Vxfj8AMhPA.Zmv2hHHpL3RAV2NzfrxtzLjCcZ.NIW.', 2),
+('michaelb', '$2y$10$Fw3TrXSDpf5Vxfj8AMhPA.Zmv2hHHpL3RAV2NzfrxtzLjCcZ.NIW.', 3),
+('lisawhite', '$2y$10$Fw3TrXSDpf5Vxfj8AMhPA.Zmv2hHHpL3RAV2NzfrxtzLjCcZ.NIW.', 4),
+('chrisg', '$2y$10$Fw3TrXSDpf5Vxfj8AMhPA.Zmv2hHHpL3RAV2NzfrxtzLjCcZ.NIW.', 256), 5);
+
