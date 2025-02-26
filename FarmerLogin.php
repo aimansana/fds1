@@ -17,7 +17,7 @@ if (isset($_POST['btnLogin'])) {
             // Verify password using password_verify()
         if (password_verify($password, $row['Password'])) {
             $_SESSION['username'] = $username;
-            header("Location: FarmerDashboard1.php"); // Redirect to the dashboard
+            header("Location: FarmerDashboard.php"); // Redirect to the dashboard
             exit();
             }
             else {
