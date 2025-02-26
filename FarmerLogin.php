@@ -8,7 +8,7 @@ if (isset($_POST['btnLogin'])) {
     $password = trim($_POST['txtPsw']);
 
     // Use prepared statement to prevent SQL Injection
-    $stmt = $conn->prepare("SELECT Password FROM FARMERS WHERE username = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT Password FROM FARMER_login WHERE username = ? LIMIT 1");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -37,7 +37,7 @@ if (isset($_POST['btnLogin'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmer Login</title>
-    <link rel="stylesheet" href="farmer.css">
+    <link rel="stylesheet" href="FarmerLogin.css">
 </head>
 <body>
 
